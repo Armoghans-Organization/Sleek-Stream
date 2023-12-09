@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c5f1a299-e079-4f43-a6f1-c2a7cdfd7f9f/deploy-status)](https://app.netlify.com/sites/sleekstream/deploys)
 
-**[Sleek Stream](https://github.com/Armoghans-Organization/Sleek-Stream.git)** is a versatile **[Hugo theme](https://gohugo.io/getting-started/installing/)**  designed to provide a modern web development experience. Whether you're building a portfolio, managing blogs, or sharing cheat sheets, Sleek Stream has got you covered.
+**Sleek Stream** is a versatile **Hugo theme**  designed to provide a modern web development experience. Whether you're building a portfolio, managing blogs, or sharing cheat sheets, Sleek Stream has got you covered.
 
 ## Table of Contents
 
