@@ -89,10 +89,16 @@ Navigate to the ``content`` directory in your Hugo site. Customize the content o
 Explore the ``static/css`` directory for styling options. Customize the theme's appearance by modifying the ``styles.css`` file.
 
 ### 7. Run Hugo Locally:
-To see your site locally, run Hugo in server mode:
+To see your site locally, run Hugo Server in developement mode:
 ```bash
 npm run dev
 ```
+
+To see your site locally, run Hugo Server in Production mode:
+```bash
+npm run prod
+```
+
 Visit [http://localhost:1313/](http://localhost:1313/) in your web browser to view your site.
 
 ### 8. Further Customization:
