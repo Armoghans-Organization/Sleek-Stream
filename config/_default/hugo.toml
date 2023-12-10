@@ -1,5 +1,7 @@
 # The base URL for your site. Should include the protocol (e.g., 'https://').
 baseURL = 'https://sleekstream.netlify.app'
+# For Developement
+# baseURL = 'http://localhost:1313/'
 # The title of your site.
 title = 'Sleek Stream'
 # The default language code for your site.

@@ -9,3 +9,20 @@
 /* put site specific css styles here using the @layer directive */
 /* see https://tailwindcss.com/docs/functions-and-directives#layer */
 /* main.css or styles.css or whatever your main CSS file is named */
+
+@layer base {
+    :root {
+        --text: 30 41 59;
+        --background: 207 250 254;
+        --primary: 242 78 24;
+        --secondary: 243 173 89;
+        --accent: 89 222 227;
+    }
+    .dark {
+        --text: 252 233 227;
+        --background: 51 65 85;
+        --primary: 231 68 13;
+        --secondary: 164 95 12;
+        --accent: 28 161 166;
+    }
+}
