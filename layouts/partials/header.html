@@ -1,2 +1,33 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<nav class="container mx-auto flex justify-between items-center py-4">
+    <!-- Logo -->
+    {{ if .Site.Params.Nav.Logo }}
+    <img src="{{ . }}" alt="{{ site.Title }}" class="w-12 h-12 rounded-full">
+    {{ end }}
+    <div class="logo text-2xl font-bold text-primary font-heading">
+        {{ site.Title }}
+    </div>
+
+    <!-- Menu -->
+    {{- partial "menu.html" -}}
+
+    <div class="flex space-y-0 space-x-3">
+        <!-- Search Bar -->
+        <div class="search-bar flex items-center">
+            {{ if .Site.Params.Nav.enableSearch }}
+            <img src="/images/search.svg" alt="search">
+            {{ end }}
+        </div>
+
+        <!-- Light/Dark Mode Toggle -->
+        <div class="flex items-center">
+            {{ if .Site.Params.Nav.enableThemeSwitcher }}
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                <span id="moon"><img src="{{ .Site.BaseURL }}images/moon.png" alt="moon"
+                        style="height: 25px; width: 25px;"></span>
+                <span id="sun" class="hidden"><img src="{{ .Site.BaseURL }}images/sun.png" alt="sun"
+                        style="height: 25px; width: 25px;"></span>
+            </button>
+            {{ end }}
+        </div>
+    </div>
+</nav>
