@@ -13,13 +13,9 @@
 
 @layer base {
     :root {
-        --text: 30 41 59;
-        --background: 207 250 254;
         --primary: 242 78 24;
         --secondary: 243 173 89;
         --accent: 89 222 227;
-        --dark-text: 252 233 227;
-        --dark-background: 51 65 85;
         --dark-primary: 231 68 13;
         --dark-secondary: 164 95 12;
         --dark-accent: 28 161 166;
@@ -28,9 +24,9 @@
 
 @layer components {
     .light-mode {
-        @apply text-text bg-background;
+        @apply bg-gradient-to-r from-purple-300 to-blue-200 text-slate-700;
     }
     .dark-mode {
-        @apply text-dark-text bg-dark-background;
+        @apply bg-gradient-to-r from-gray-800 to-gray-600 text-white;
     }
 }

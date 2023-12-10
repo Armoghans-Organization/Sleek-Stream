@@ -1,33 +1,52 @@
-<nav class="container mx-auto flex justify-between items-center py-4">
-    <!-- Logo -->
-    {{ if .Site.Params.Nav.Logo }}
-    <img src="{{ . }}" alt="{{ site.Title }}" class="w-12 h-12 rounded-full">
-    {{ end }}
-    <div class="logo text-2xl font-bold text-primary font-heading">
-        {{ site.Title }}
-    </div>
+<script>
+    // Small Screen Navbar
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the button and menu elements
+        var mobileMenuToggle = document.getElementById("mobileMenuToggle");
+        var mobileMenu = document.getElementById("mobileMenu");
 
-    <!-- Menu -->
-    {{- partial "menu.html" -}}
+        // Add click event listener to the button
+        mobileMenuToggle.addEventListener("click", function () {
+            // Toggle the 'hidden' class on the mobile menu
+            mobileMenu.classList.toggle("hidden");
+        });
+    });
+</script>
+<header>
+    <!-- Navigation Bar -->
+    <nav class="bg-white rounded-lg shadow-md m-4 dark:dark-nav">
+        <!-- Navigation Container -->
+        <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+            <!-- Logo and Site Title -->
+            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                {{ if .Site.Params.Logo }}
+                <img src="{{ . }}" class="h-8" alt="{{ site.Title }}" />
+                {{ end }}
+                <span class="text-2xl text-primary font-heading font-semibold">{{
+                    site.Title }}</span>
+            </a>
 
-    <div class="flex space-y-0 space-x-3">
-        <!-- Search Bar -->
-        <div class="search-bar flex items-center">
-            {{ if .Site.Params.Nav.enableSearch }}
-            <img src="/images/search.svg" alt="search">
-            {{ end }}
+            <!-- Navigation Links and Icons -->
+            {{- partial "menu.html" -}}
+
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center">
+                <!-- Search Button -->
+                {{ if .Site.Params.Nav.enableSearch }}
+                <button id="search-button" class="mx-3 px-3" aria-label="Search">
+                    <img src="{{ .Site.BaseURL }}images/search.svg" alt="search" style="height: 20px; width: 20px;">
+                </button>
+                {{ end }}
+
+                <!-- Theme Switcher Button -->
+                {{ if .Site.Params.Nav.enableThemeSwitcher }}
+                <button id="theme-toggle" aria-label="Toggle Theme" class="flex items-center">
+                    <span id="moon"><img src="{{ .Site.BaseURL }}images/moon.png" alt="moon"
+                            style="height: 25px; width: 25px;"></span>
+                    <span id="sun" class="hidden"><img src="{{ .Site.BaseURL }}images/sun.png" alt="sun"
+                            style="height: 25px; width: 25px;"></span>
+                </button>
+                {{ end }}
+            </div>
         </div>
-
-        <!-- Light/Dark Mode Toggle -->
-        <div class="flex items-center">
-            {{ if .Site.Params.Nav.enableThemeSwitcher }}
-            <button id="theme-toggle" aria-label="Toggle Theme">
-                <span id="moon"><img src="{{ .Site.BaseURL }}/images/moon.png" alt="moon"
-                        style="height: 25px; width: 25px;"></span>
-                <span id="sun" class="hidden"><img src="{{ .Site.BaseURL }}/images/sun.png" alt="sun"
-                        style="height: 25px; width: 25px;"></span>
-            </button>
-            {{ end }}
-        </div>
-    </div>
-</nav>
+    </nav>
+</header>
