@@ -16,6 +16,11 @@ module.exports = {
                 'primary': 'rgb(var(--primary))',
                 'secondary': 'rgb(var(--secondary))',
                 'accent': 'rgb(var(--accent))',
+                'dark-text': 'rgb(var(--dark-text))',
+                'dark-background': 'rgb(var(--dark-background))',
+                'dark-primary': 'rgb(var(--dark-primary))',
+                'dark-secondary': 'rgb(var(--dark-secondary))',
+                'dark-accent': 'rgb(var(--dark-accent))',
             },
             fontSize: {
                 sm: '0.750rem',

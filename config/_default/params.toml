@@ -1,5 +1,5 @@
 # Site Theme (leave blank for light mode and 'dark' for dark mode)
-Theme = ''
+Theme = 'dark'
 # Author information
 author = "Armoghan-ul-Mohmin"
 github = "https://github.com/Armoghan-ul-Mohmin"

@@ -18,12 +18,19 @@
         --primary: 242 78 24;
         --secondary: 243 173 89;
         --accent: 89 222 227;
+        --dark-text: 252 233 227;
+        --dark-background: 51 65 85;
+        --dark-primary: 231 68 13;
+        --dark-secondary: 164 95 12;
+        --dark-accent: 28 161 166;
     }
-    .dark {
-        --text: 252 233 227;
-        --background: 51 65 85;
-        --primary: 231 68 13;
-        --secondary: 164 95 12;
-        --accent: 28 161 166;
+}
+
+@layer components {
+    .light-mode {
+        @apply text-text bg-background;
+    }
+    .dark-mode {
+        @apply text-dark-text bg-dark-background;
     }
 }
